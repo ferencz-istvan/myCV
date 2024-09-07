@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My CV</title>
+    <!--  <link rel="stylesheet" href="./styles/styles.css" /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Space+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /*Our App*/
+      html {
+        margin: 0;
+      }
+      body {
+        font-family: "Montserrat", sans-serif;
+        background-color: white;
+        margin: 0;
+      }
+      .app-wrapper {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 1200px;
+        margin: 0px auto;
+        background-color: #fff;
+      }
+
+      /*Sidebar Styles*/
+      .sidebar-section {
+        /*  background-color: #DEEEFF; */
+        /* background-color: rgb(190, 160, 180); */
+        background-color: #deeeff;
+        min-height: 1450px;
+      }
+      .sidebar-image {
+        margin-top: 40px;
+      }
+      .contacts-container {
+        padding-left: 40px;
+        padding-right: 30px;
+      }
+      .contacts-header {
+        color: #161d2a;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin: 30px auto 15px auto;
+      }
+      .contacts-phone {
+        color: #0b2044;
+        font-style: normal;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-decoration: none;
+        margin-left: 10px;
+      }
+      .contacts-link {
+        color: #0b2044;
+        font-style: normal;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-decoration: none;
+        margin-left: 10px;
+      }
+      .contacts-email {
+        color: #0b2044;
+        font-style: normal;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        margin-left: 10px;
+        text-decoration: none;
+      }
+      .contacts-element {
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+      }
+      .tech-skills-section {
+        padding-left: 40px;
+        padding-right: 60px;
+        margin-top: 40px;
+      }
+      .tech-skills-header {
+        color: #161d2a;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin: 1em auto 0px auto;
+      }
+      .tech-skills-list {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #161d2a;
+        margin-left: -10px;
+        margin-top: 8px;
+      }
+      .soft-skills-section {
+        padding-left: 40px;
+        padding-right: 60px;
+        margin-top: 40px;
+      }
+      .soft-skills-header {
+        font-weight: 700;
+        font-size: 22px;
+        color: #161d2a;
+        margin: 1em auto 0px auto;
+      }
+      .soft-skills-list {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #161d2a;
+        margin-left: -10px;
+        margin-top: 8px;
+      }
+
+      /*Main content Styles*/
+      .right-side-container {
+        padding-left: 88px;
+        padding-right: 80px;
+        padding-top: 80px;
+        padding-bottom: 100px;
+      }
+      /*.right-side-container>* {
+          padding-bottom: 20px;
+      }
+      .light-blue {
+          color: #6096FF;
+      }*/
+      .about-me-profession {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin: 0;
+      }
+      .about-me-name {
+        font-size: 45px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin: 10px 0px 15px 0px;
+      }
+      .about-me-description {
+        text-align: justify;
+        text-justify: inter-word;
+        color: #595959;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+      }
+      .projects-section {
+        margin-top: 40px;
+      }
+      .projects-header {
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin: auto auto 0px auto;
+      }
+      .projects-list {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 24px;
+        margin-left: -20px;
+      }
+      .project-name {
+        color: #595959;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        text-decoration-line: underline;
+      }
+      .project-info {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+      }
+      .work-experience-section {
+        margin-top: 40px;
+      }
+      .work-experience-header {
+        font-size: 22px;
+        font-weight: 700;
+        font-style: normal;
+        line-height: normal;
+        margin: auto auto 0px auto;
+      }
+      .company-name {
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin: 20px auto auto auto;
+      }
+      .company-info {
+        color: #2355b8;
+      }
+      .company-time {
+        color: #6f6f6f;
+        font-size: 14px;
+        font-style: bold;
+        font-weight: 400;
+        line-height: normal;
+        margin: 5px auto 15px auto;
+      }
+      .company-elements-list {
+        color: #595959;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        margin-left: -15px;
+        margin-top: -5px;
+      }
+      /*  .company-container {
+              margin-top: -10px;
+            } */
+      .education-section {
+        margin-top: 40px;
+      }
+      .education-header {
+        font-size: 22px;
+        font-weight: 700;
+        font-style: normal;
+        line-height: normal;
+        margin-bottom: 10px;
+      }
+      .institution-name {
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        color: #2355b8;
+        margin: 0px;
+      }
+      .institution-info {
+        font-size: 16px;
+        font-weight: 700;
+        margin-top: 8px;
+        margin-bottom: 8px;
+      }
+      .institution-time {
+        color: #6f6f6f;
+        font-size: 14px;
+        font-style: bold;
+        font-weight: 400;
+        line-height: normal;
+      }
+
+      .education-institution-container {
+        margin-top: 30px;
+      }
+      .surgos {
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <!--Our App-->
+    <div class="app-wrapper">
+      <!-- Right side container-->
+      <div class="right-side-container">
+        <!--About me section-->
+        <div class="about-me-section">
+          <h4 class="about-me-profession"></h4>
+
+          <h1 class="about-me-name">Ferencz István</h1>
+
+          <p class="about-me-description">
+            I was born in Târgu Secuiesc on April 1st 1996. Currently I live in
+            Sfântu Gheorghe with my wife. I am passionate about technical
+            details and logical structures. After four years of teaching, I
+            would like to try something else.
+          </p>
+        </div>
+
+        <!-- Projects section -->
+        <div class="projects-section">
+          <h3 class="projects-header">Projects</h3>
+
+          <ol class="projects-list">
+            <li>
+              <a
+                class="project-name"
+                href="https://github.com/ferencz-istvan/OnlineCatalogFrontend"
+                target="_blank"
+                >Online Catalog - frontend side</a
+              >
+              <span class="project-info"
+                >...........................................................</span
+              >
+              <span class="project-info">[ React, Next.JS ]</span>
+            </li>
+            <li>
+              <a
+                class="project-name"
+                href="https://github.com/ferencz-istvan/OnlineCatalogBackend"
+                target="_blank"
+                >Online Catalog - backend side</a
+              >
+              <span class="project-info"
+                >...........................................................</span
+              >
+              <span class="project-info">[ Node, Express.JS ]</span>
+            </li>
+            <li>
+              <a
+                class="project-name"
+                href="https://github.com/ferencz-istvan/Styxa-Project-Frontend"
+                target="_blank"
+                >Styxa - City project - frontend side</a
+              >
+              <span class="project-info"
+                >...................................................</span
+              >
+              <span class="project-info">[ Vue.JS, Tailwind ]</span>
+            </li>
+            <li>
+              <a
+                class="project-name"
+                href="https://github.com/ferencz-istvan/Styxa-Project-Backend"
+                target="_blank"
+                >Styxa - City project - backend side</a
+              >
+              <span class="project-info"
+                >...................................................</span
+              >
+              <span class="project-info">[ Node, Express.JS ]</span>
+            </li>
+            <li>
+              <a
+                class="project-name"
+                href="https://github.com/ferencz-istvan/Sort"
+                target="_blank"
+                >Quick sort</a
+              >
+              <span class="project-info"
+                >..........................................................................................................</span
+              >
+              <span class="project-info">[ HTML5, CSS3, JS ]</span>
+            </li>
+          </ol>
+        </div>
+
+        <!-- Work experience section-->
+        <div class="work-experience-section">
+          <h3 class="work-experience-header">Work Experience</h3>
+          <!-- 1st company -->
+          <div class="company-container">
+            <h4 class="company-name">
+              Mathematics teacher<br />
+              <span class="company-info"
+                >Liceul "Kőrösi Csoma Sándor" Covasna</span
+              >
+            </h4>
+            <p class="company-time">September 2022 - 2024 | Romania</p>
+            <ul class="company-elements-list">
+              <li>teaching high and middle school students</li>
+              <li>differentiated education</li>
+              <li>timetable planning</li>
+              <li>worksheet design and editing</li>
+            </ul>
+          </div>
+
+          <!-- 2nd company -->
+          <div class="company-container">
+            <h4 class="company-name">
+              Mathematics teacher <br />
+              <span class="company-info"
+                >Liceul Tehnologic "Puskás Tivadar" Sfântu Gheorghe</span
+              >
+            </h4>
+            <p class="company-time">September 2020 - August 2022 | Romania</p>
+            <ul class="company-elements-list">
+              <li>teaching high school students</li>
+              <li>differentiated education</li>
+              <li>worksheet design and editing</li>
+              <li>class leadership</li>
+              <li>practical mathematics circles</li>
+              <li>teaching students with special needs</li>
+            </ul>
+          </div>
+          <!-- 3rd company-->
+        </div>
+        <!--Education-->
+        <div class="education-section">
+          <!-- 1st institution-->
+          <h3 class="education-header">Education</h3>
+          <!-- 3nd institution-->
+          <div class="surgos">
+            <h4 class="institution-name">Styxa</h4>
+            <h5 class="institution-info">Online course for web developpment</h5>
+            <p class="institution-time">March 2024 - June 2024 | Romania</p>
+          </div>
+          <div>
+            <h4 class="institution-name">
+              Babeș-Bolyai University Cluj-Napoca
+            </h4>
+            <h5 class="institution-info">MSc - Didactic Mathematics</h5>
+            <p class="institution-time">October 2018 - June 2020 | Romania</p>
+          </div>
+
+          <div class="education-institution-container">
+            <h4 class="institution-name">
+              Babeș-Bolyai University Cluj-Napoca
+            </h4>
+            <h5 class="institution-info">BSc - Mathematics</h5>
+            <p class="institution-time">October 2015 - June 2018 | Romania</p>
+          </div>
+          <!-- 2st institution-->
+        </div>
+      </div>
+      <!--Sidebar section-->
+      <aside class="sidebar-section">
+        <img
+          class="sidebar-image"
+          src="https://i.postimg.cc/YqV1BHFX/fenykep1-B.jpg"
+          alt="Profile picture"
+          width="370px"
+        />
+
+        <!-- Sidebar informations-->
+        <div class="sidebar-informations">
+          <!--Contacts informations-->
+          <div class="contacts-container">
+            <h3 class="contacts-header">Contacts</h3>
+            <div class="contacts-element">
+              <!-- <span class="contacts-item">Tel: </span> -->
+              <svg
+                height="24px"
+                version="1.1"
+                id="_x32_"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 512 512"
+                xml:space="preserve"
+                fill="#000000"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <style type="text/css">
+                    .st0 {
+                      fill: #000000;
+                    }
+                  </style>
+                  <g>
+                    <path
+                      class="st0"
+                      d="M94.811,21.696c-35.18,22.816-42.091,94.135-28.809,152.262c10.344,45.266,32.336,105.987,69.42,163.165 c34.886,53.79,83.557,102.022,120.669,129.928c47.657,35.832,115.594,58.608,150.774,35.792 c17.789-11.537,44.218-43.058,45.424-48.714c0,0-15.498-23.896-18.899-29.14l-51.972-80.135 c-3.862-5.955-28.082-0.512-40.386,6.457c-16.597,9.404-31.882,34.636-31.882,34.636c-11.38,6.575-20.912,0.024-40.828-9.142 c-24.477-11.262-51.997-46.254-73.9-77.947c-20.005-32.923-40.732-72.322-41.032-99.264c-0.247-21.922-2.341-33.296,8.304-41.006 c0,0,29.272-3.666,44.627-14.984c11.381-8.392,26.228-28.286,22.366-34.242l-51.972-80.134c-3.401-5.244-18.899-29.14-18.899-29.14 C152.159-1.117,112.6,10.159,94.811,21.696z"
+                    ></path>
+                  </g>
+                </g>
+              </svg>
+              <a href="tel:+1 111 1111 11 11" class="contacts-phone">
+                0755 597 104
+              </a>
+            </div>
+            <div class="contacts-element">
+              <svg
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                height="24px"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    fill="#0A66C2"
+                    d="M12.225 12.225h-1.778V9.44c0-.664-.012-1.519-.925-1.519-.926 0-1.068.724-1.068 1.47v2.834H6.676V6.498h1.707v.783h.024c.348-.594.996-.95 1.684-.925 1.802 0 2.135 1.185 2.135 2.728l-.001 3.14zM4.67 5.715a1.037 1.037 0 01-1.032-1.031c0-.566.466-1.032 1.032-1.032.566 0 1.031.466 1.032 1.032 0 .566-.466 1.032-1.032 1.032zm.889 6.51h-1.78V6.498h1.78v5.727zM13.11 2H2.885A.88.88 0 002 2.866v10.268a.88.88 0 00.885.866h10.226a.882.882 0 00.889-.866V2.865a.88.88 0 00-.889-.864z"
+                  ></path>
+                </g>
+              </svg>
+              <a
+                class="contacts-link"
+                href="https://www.linkedin.com/in/istvan-ferencz-376175266/"
+                target="_blank"
+                >linkedin.com<br />/in/istvan-ferencz-376175266/</a
+              >
+            </div>
+
+            <div class="contacts-element">
+              <!-- <span class="contacts-item">Mail:</span> -->
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M4 7.00005L10.2 11.65C11.2667 12.45 12.7333 12.45 13.8 11.65L20 7"
+                    stroke="#000000"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <rect
+                    x="3"
+                    y="5"
+                    width="18"
+                    height="14"
+                    rx="2"
+                    stroke="#000000"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  ></rect>
+                </g>
+              </svg>
+              <a href="mailto:johndoe@gmail.com" class="contacts-email">
+                ferencz.istvan996@gmail.com
+              </a>
+            </div>
+          </div>
+
+          <!--Tech skills section-->
+          <div class="tech-skills-section">
+            <h3 class="tech-skills-header">Tech Skills</h3>
+            <ul class="tech-skills-list">
+              <li>React</li>
+              <li>Vue.js</li>
+              <li>Node.js</li>
+              <li>JavaScript</li>
+              <li>CSS3</li>
+              <li>HTML5</li>
+              <li>SQL</li>
+              <li>GIT</li>
+              <li>Microsoft Office</li>
+            </ul>
+          </div>
+          <!--Soft skills section-->
+          <div class="soft-skills-section">
+            <h3 class="soft-skills-header">Soft Skills</h3>
+            <ul class="soft-skills-list">
+              <li>Teamwork</li>
+              <li>GTD</li>
+            </ul>
+          </div>
+          <!--Language skills section-->
+          <div class="soft-skills-section">
+            <h3 class="soft-skills-header">Language Skills</h3>
+            <ul class="soft-skills-list">
+              <li>Hungarian - mother tongue</li>
+              <li>English - B1</li>
+              <li>Romanian - B1</li>
+            </ul>
+          </div>
+          <!--Other skills section-->
+          <div class="soft-skills-section">
+            <h3 class="soft-skills-header">Other Skills</h3>
+            <ul class="soft-skills-list">
+              <li>category B driver's license</li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </body>
+</html>
